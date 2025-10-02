@@ -1,0 +1,113 @@
+<section class="min-h-screen py-30 px-10">
+  <div class="title py-6 pb-10">
+    <h1
+      class="text-[#090f41] text-[48px] font-[700] relative text-shadow-lg/30 mb-5"
+    >
+      Contact me
+    </h1>
+    <p class="text-[#374151] text-[14px] font-[400]">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor
+    </p>
+  </div>
+  <div class="con">
+    <form>
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label
+            for="first_name"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >First name</label
+          >
+          <input
+            type="text"
+            id="first_name"
+            class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+            placeholder="Momaen"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="last_name"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Last name</label
+          >
+          <input
+            type="text"
+            id="last_name"
+            class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+            placeholder="Amgad"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="phone"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Phone number</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+            placeholder="01*********"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Email address</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+            placeholder=".....@gmail.com"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-6">
+        <label
+          for="countries"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Choose a Topic</label
+        >
+        <select
+          id="countries"
+          class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+        >
+          <option selected>Select one...</option>
+          <option value="HT">HTML</option>
+          <option value="CS">CSS</option>
+          <option value="JS">JS</option>
+          <option value="BT">Bootstrap</option>
+          <option value="TW">tailwind</option>
+        </select>
+      </div>
+      <div class="mb-6">
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Message</label
+        >
+        <textarea
+          id="message"
+          rows="4"
+          class="bg-[#F8F8F8] border border-amber-700 text-gray-900 text-sm rounded-lg focus:ring-amber-800 focus:border-amber-800 block w-full p-2.5"
+          placeholder="Type Message...."
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-[#8B5E35] hover:bg-[#573311] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-15 py-3 text-center"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>

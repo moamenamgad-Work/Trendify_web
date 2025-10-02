@@ -1,0 +1,9 @@
+h1::before {
+  content: "";
+  width: 130px;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #090f41;
+}

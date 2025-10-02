@@ -1,0 +1,47 @@
+<section class="min-h-screen py-30 px-10">
+  <div class="title text-center mb-7">
+    <h1
+      class="text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
+    >
+      Fake Store
+    </h1>
+    <p class="text-[20px] font-[400]">Best Selling Product</p>
+  </div>
+  <div class="card grid grid-cols-4 gap-10">
+    @for (product of FakeStoreList; track product.id) {
+    <div class="bg-white border border-gray-200 rounded-lg shadow-sm min-h-1/4">
+      <a href="#">
+        <img
+          class="rounded-t-lg h-[250px] m-auto"
+          [src]="product.image"
+          [alt]="product.title"
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-5 text-2xl font-bold tracking-tight text-gray-900">
+            Title:{{ product.title.split(" ", 3).join(" ") }}
+          </h5>
+        </a>
+        <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <span class="font-bold text-[#8B5E35]"
+            >Price:{{ product.price }}EGY</span
+          >
+        </div>
+        <hr />
+        <p class="py-2">
+          <span class="font-bold text-[#8B5E35]">Description</span>:{{
+            product.description.split(" ", 10).join(" ")
+          }}
+        </p>
+        <hr />
+        <span
+          ><span class="font-bold text-[#8B5E35]">Category</span>:{{
+            product.category
+          }}</span
+        >
+      </div>
+    </div>
+    }
+  </div>
+</section>

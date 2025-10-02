@@ -1,0 +1,12 @@
+/* @theme {
+  --color-main: #8b5e35;
+  --text-main: #8b5e35;
+  --bg-main: #8b5e35;
+} */
+
+li {
+  font-size: 25px;
+}
+.active {
+  color: #8b5e35 !important;
+}

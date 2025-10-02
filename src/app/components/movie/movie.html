@@ -1,0 +1,47 @@
+<section class="min-h-screen py-30 px-10">
+  <div class="title text-center mb-7">
+    <h1
+      class="text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
+    >
+      Movies
+    </h1>
+    <p class="text-[20px] font-[400]">Best Selling Movie</p>
+  </div>
+  <div class="card grid grid-cols-4 gap-10">
+    @for (movie of moviesList; track movie.id) {
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+      <a href="#">
+        <img
+          class="rounded-t-lg h-[250px] m-auto"
+          [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+          [alt]="movie.title"
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-5 text-2xl font-bold tracking-tight text-gray-900">
+            {{ movie.title }}
+          </h5>
+        </a>
+
+        <p class="py-2">
+          <span class="font-bold text-[#8B5E35]">Description</span>:{{
+            movie.overview.split(" ", 10).join(" ")
+          }}
+        </p>
+        <hr />
+        <span
+          ><span class="font-bold text-[#8B5E35]">Category</span>:{{
+            movie.media_type
+          }}</span
+        >
+      </div>
+    </div>
+    }
+  </div>
+</section>
+@defer (on viewport) {
+<app-recommendation></app-recommendation>
+} @placeholder {
+<p>Loading Movies Recommendation......</p>
+}
