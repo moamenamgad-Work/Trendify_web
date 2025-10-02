@@ -1,4 +1,4 @@
-<section class="min-h-screen py-30 px-10">
+<section class="min-h-screen py-15 px-10">
   <div class="title text-center mb-7">
     <h1
       class="text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
@@ -7,7 +7,7 @@
     </h1>
     <p class="text-[20px] font-[400]">Best Selling Movie</p>
   </div>
-  <div class="card grid grid-cols-4 gap-10">
+  <div class="card grid md:grid-cols-4 gap-10">
     @for (movie of moviesList; track movie.id) {
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
       <a href="#">

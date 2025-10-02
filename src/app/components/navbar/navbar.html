@@ -2,22 +2,55 @@
   class="bg-white dark:bg-gray-100 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-black"
 >
   <div
-    class="title max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <span
-      class="text-[#8B5E35] self-center text-3xl font-semibold whitespace-nowrap"
-    >
-      <a routerLink="/home">Trendify</a>
-    </span>
+    <!-- Logo -->
+    <a routerLink="/home" class="flex items-center">
+      <span
+        class="text-[#8B5E35] self-center text-3xl font-semibold whitespace-nowrap"
+      >
+        Trendify
+      </span>
+    </a>
 
+    <!-- Right section (Buttons + Toggle) -->
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <!-- Get Started button -->
       <button
         type="button"
         class="text-white bg-[#8B5E35] hover:bg-[#573311] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
       >
         <a routerLink="/gallery">Get started</a>
       </button>
+
+      <!-- Hamburger button (mobile) -->
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
     </div>
+
+    <!-- Collapsible Menu -->
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
       id="navbar-sticky"
@@ -30,7 +63,6 @@
             routerLink="/home"
             routerLinkActive="active"
             class="block py-2 px-3 bg-amber-700 hover:text-[#8B5E35] rounded-sm md:bg-transparent md:p-0"
-            aria-current="page"
             >Home</a
           >
         </li>
