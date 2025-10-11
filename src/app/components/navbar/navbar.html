@@ -4,7 +4,6 @@
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <!-- Logo -->
     <a routerLink="/home" class="flex items-center">
       <span
         class="text-[#8B5E35] self-center text-3xl font-semibold whitespace-nowrap"
@@ -13,9 +12,7 @@
       </span>
     </a>
 
-    <!-- Right section (Buttons + Toggle) -->
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <!-- Get Started button -->
       <button
         type="button"
         class="text-white bg-[#8B5E35] hover:bg-[#573311] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
@@ -23,11 +20,10 @@
         <a routerLink="/gallery">Get started</a>
       </button>
 
-      <!-- Hamburger button (mobile) -->
       <button
         data-collapse-toggle="navbar-sticky"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 hover:text-[#8B5E35] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-sticky"
         aria-expanded="false"
       >
@@ -50,7 +46,6 @@
       </button>
     </div>
 
-    <!-- Collapsible Menu -->
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
       id="navbar-sticky"
@@ -62,7 +57,7 @@
           <a
             routerLink="/home"
             routerLinkActive="active"
-            class="block py-2 px-3 bg-amber-700 hover:text-[#8B5E35] rounded-sm md:bg-transparent md:p-0"
+            class="block py-2 px-3 hover:text-[#8B5E35] rounded-sm md:bg-transparent md:p-0"
             >Home</a
           >
         </li>
