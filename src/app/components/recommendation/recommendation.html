@@ -1,36 +1,45 @@
-<section class="min-h-screen py-30 px-10">
-  <div class="title text-center mb-7">
+<section class="min-h-screen py-10 px-5 md:py-20 md:px-10">
+  <div class="title text-center mb-10">
     <h1
-      class="text-4xl md:text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
+      class="text-3xl sm:text-4xl md:text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
     >
       Recommendation
     </h1>
-    <p class="text-[20px] font-[400]">Best Selling Movie</p>
+    <p class="text-base sm:text-lg md:text-[20px] font-[400]">
+      Best Selling Movie
+    </p>
   </div>
-  <div class="card grid md:grid-cols-3 gap-10">
+
+  <div
+    class="card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10"
+  >
     @for (movie of moviesList.slice(0,6); track movie.id) {
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 mx-auto w-full"
+    >
       <a href="#">
         <img
-          class="rounded-t-lg h-[250px] m-auto"
+          class="rounded-t-lg h-64 sm:h-[250px] w-full object-cover"
           [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
           [alt]="movie.title"
         />
       </a>
-      <div class="p-5">
+      <div class="p-4 sm:p-5">
         <a href="#">
-          <h5 class="mb-5 text-2xl font-bold tracking-tight text-gray-900">
+          <h5
+            class="mb-3 sm:mb-5 text-lg sm:text-2xl font-bold tracking-tight text-gray-900"
+          >
             {{ movie.title }}
           </h5>
         </a>
 
-        <p class="py-2">
+        <p class="py-2 text-sm sm:text-base leading-relaxed">
           <span class="font-bold text-[#8B5E35]">Description</span>:{{
             movie.overview.split(" ", 10).join(" ")
           }}
         </p>
-        <hr />
-        <span
+        <hr class="my-2" />
+        <span class="text-sm sm:text-base"
           ><span class="font-bold text-[#8B5E35]">Category</span>:{{
             movie.media_type
           }}</span

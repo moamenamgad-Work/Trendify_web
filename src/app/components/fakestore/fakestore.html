@@ -1,45 +1,46 @@
-<section class="min-h-screen py-15 px-10">
-  <div class="title text-center mb-7">
+<section class="min-h-screen py-10 px-5 md:py-16 md:px-10">
+  <div class="title text-center mb-10">
     <h1
-      class="text-[60px] font-[700] relative mb-5 text-shadow-lg/30 text-amber-700"
+      class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-amber-700 drop-shadow-lg"
     >
       Fake Store
     </h1>
-    <p class="text-[20px] font-[400]">Best Selling Product</p>
+    <p class="text-lg sm:text-xl text-gray-700">Best Selling Products</p>
   </div>
-  <div class="card grid md:grid-cols-4 gap-10">
+
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     @for (product of FakeStoreList; track product.id) {
-    <div class="bg-white border border-gray-200 rounded-lg shadow-sm min-h-1/4">
-      <a href="#">
+    <div
+      class="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
+    >
+      <a href="#" class="block">
         <img
-          class="rounded-t-lg h-[250px] m-auto"
+          class="rounded-t-xl h-56 w-full object-contain p-4"
           [src]="product.image"
           [alt]="product.title"
         />
       </a>
-      <div class="p-5">
+      <div class="p-5 flex flex-col flex-grow">
         <a href="#">
-          <h5 class="mb-5 text-2xl font-bold tracking-tight text-gray-900">
-            Title:{{ product.title.split(" ", 3).join(" ") }}
+          <h5 class="mb-3 text-xl font-semibold text-gray-900">
+            {{ product.title.split(" ", 3).join(" ") }}
           </h5>
         </a>
-        <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          <span class="font-bold text-[#8B5E35]"
-            >Price:{{ product.price }}EGY</span
-          >
+        <div class="mb-2 text-gray-700">
+          <span class="font-bold text-[#8B5E35]">
+            Price: {{ product.price }} EGY
+          </span>
         </div>
-        <hr />
-        <p class="py-2">
-          <span class="font-bold text-[#8B5E35]">Description</span>:{{
-            product.description.split(" ", 10).join(" ")
-          }}
+        <hr class="my-2" />
+        <p class="text-sm text-gray-600 flex-grow">
+          <span class="font-bold text-[#8B5E35]">Description:</span>
+          {{ product.description.split(" ", 10).join(" ") }}
         </p>
-        <hr />
-        <span
-          ><span class="font-bold text-[#8B5E35]">Category</span>:{{
-            product.category
-          }}</span
-        >
+        <hr class="my-2" />
+        <span class="text-sm text-gray-700">
+          <span class="font-bold text-[#8B5E35]">Category:</span>
+          {{ product.category }}
+        </span>
       </div>
     </div>
     }
